@@ -522,9 +522,9 @@ static bool save_config(const char *game_dir, const GameConfig *cfg) {
         "[ENV]\r\n"
         "xres=800\r\n"
         "yres=600\r\n"
-        "fullscreen=%s\r\n"
+        "fullscreen=off\r\n"
         "cres=1\r\n"
-        "d3d=on\r\n"
+        "d3d=off\r\n"
         "sound=on\r\n"
         "joystick=on\r\n"
         "bordin=on\r\n"
@@ -632,7 +632,6 @@ static bool save_config(const char *game_dir, const GameConfig *cfg) {
         "vpam=1\r\n"
         "vpal=1\r\n"
         "vpasl=1\r\n",
-        cfg->fullscreen ? "on" : "off",
         cfg->width, cfg->height,
         cfg->lock_res ? 1 : 0,
         cfg->skip_intro ? 1 : 0,

@@ -57,6 +57,7 @@ void qol_entry(void) {
         "jmp qol_FUN_005969c0\n\t"        /* 0x007bc00f: Hook 4 - Hor+ widescreen world & cabin camera */
         "jmp qol_mirror_scale_hook\n\t"   /* 0x007bc014: Hook 5 - 3D cabin side-mirror 2D projection */
         "jmp qol_panelspace_pos_hook\n\t" /* 0x007bc019: Hook 6 - 3rd-person 3D gauges bottom-left anchor */
+        "jmp qol_null_check_5d6e00\n\t"   /* 0x007bc01e: Hook 7 - Prevent NULL texture segfault at 0x005D6F45 */
     );
 }
 
@@ -293,4 +294,28 @@ void * __attribute__((cdecl, used)) qol_panelspace_pos_hook(void *out_mat, float
     }
     return FUN_005ab330(out_mat, x, y, z);
 }
+
+/*
+ * Hook 7 (at 0x005d6e00 in FUN_005d6e00):
+ * Prevents crash at 0x005d6f45 (rep movsl from NULL) by checking if the source
+ * pixel buffer pointer (3rd parameter, [esp+12]) is NULL. If NULL, safely returns 0.
+ */
+__attribute__((naked, used))
+void qol_null_check_5d6e00(void) {
+    __asm__ volatile (
+        "cmp dword ptr [esp+12], 0\n\t"
+        "jne 1f\n\t"
+        "xor eax, eax\n\t"
+        "ret\n\t"
+        "1:\n\t"
+        "sub esp, 0x114\n\t"
+        "push ebx\n\t"
+        "push ebp\n\t"
+        "push esi\n\t"
+        "push edi\n\t"
+        "mov eax, 0x005d6e0a\n\t"
+        "jmp eax\n\t"
+    );
+}
+
 

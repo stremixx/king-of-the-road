@@ -117,6 +117,9 @@ def patch_executable(game_dir: str, qol_bin_path: str) -> None:
     # Hook 6: 3rd-Person External 3D Gauges (PanelSpace) Bottom-Left Anchor (FUN_00535a90 at 0x0053615a)
     write_at_va(0x0053615A, make_call(0x0053615A, QOL_VA + 0x19))
 
+    # Hook 7: NULL texture buffer check in FUN_005d6e00 (prevents 0x005d6f45 page fault)
+    write_at_va(0x005D6E00, make_jmp(0x005D6E00, QOL_VA + 0x1E) + b"\x90" * 5)
+
     # 3. Direct instruction patches for arbitrary display modes, >2GB VRAM, >=4GB RAM, and CRT/AVI fixes
     # 3a. Accept any custom resolution in DirectDraw EnumDisplayModes callback (0x005d4240)
     # mov ecx, [esp+8]; mov dword ptr [ecx+0x18], 1; xor eax, eax; ret 8
