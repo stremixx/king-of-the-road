@@ -236,3 +236,4 @@ Usage: ./king_of_the_road [options]
 ## Legal & Disclaimer
 
 *Hard Truck 2: King of the Road* is copyright © 2001 SoftLab-NSK / 1C Company / Buka Entertainment. This repository contains only open-source porting tools, launcher code, and binary patch scripts. No copyrighted game assets, proprietary textures, audio, or game executables are distributed in this repository. You must own a legally acquired copy of the game to use this software.
+
