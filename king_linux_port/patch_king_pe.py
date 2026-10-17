@@ -170,6 +170,30 @@ def patch_executable(game_dir: str, qol_bin_path: str) -> None:
 
     print(f"[+] Successfully patched {king_exe} and {king_qol} ({len(pe)} bytes)")
 
+    # Ensure high-performance D2GI D3D9 wrapper is deployed to game files
+    d2gi_dir = os.path.join(base_dir, "king_linux_port", "d2gi")
+    src_dll = os.path.join(d2gi_dir, "ddraw.dll")
+    dst_dll = os.path.join(game_dir, "ddraw.dll")
+    bak_dll = os.path.join(game_dir, "ddraw_gog.dll")
+    src_ini = os.path.join(d2gi_dir, "d2gi.ini")
+    dst_ini = os.path.join(game_dir, "d2gi.ini")
+
+    if os.path.exists(dst_dll):
+        if os.path.getsize(dst_dll) > 500000:
+            if not os.path.exists(bak_dll):
+                shutil.copy2(dst_dll, bak_dll)
+                print(f"[*] Backed up legacy GOG wrapper to {bak_dll}")
+            if os.path.exists(src_dll):
+                shutil.copy2(src_dll, dst_dll)
+                print("[+] Deployed D2GI v0.5 D3D9 hardware wrapper (60 FPS)")
+    elif os.path.exists(src_dll):
+        shutil.copy2(src_dll, dst_dll)
+        print("[+] Deployed D2GI v0.5 D3D9 hardware wrapper (60 FPS)")
+
+    if not os.path.exists(dst_ini) and os.path.exists(src_ini):
+        shutil.copy2(src_ini, dst_ini)
+        print("[+] Initialized d2gi.ini from template")
+
 
 if __name__ == "__main__":
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

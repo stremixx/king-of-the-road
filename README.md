@@ -38,11 +38,15 @@ This project resolves all of these issues through a combination of an interactiv
 
 ## Key Features
 
+- **Smooth 60 FPS Performance & Extreme Graphics Optimization**:
+  - **D2GI Direct3D 9 Hardware Acceleration**: Replaces the sluggish stock GOG wrapper with the specialized open-source **D2GI** DirectDraw7/Direct3D7 to Direct3D 9 wrapper, utilizing native hardware vertex buffers and completely eliminating CPU-to-GPU memory bus readback stalls.
+  - **All-Cores CPU Affinity**: Bypasses the infamous King of the Road patch 8.2 single-core affinity lock (`SetProcessAffinityMask`), distributing rendering, physics, audio, and Wine threads across all available CPU cores.
+  - **4:3 Aspect Ratio Menu Fix (`EnableUIFix = 1`)**: Automatically pillarboxes 2D UI and menus to their original un-stretched 4:3 aspect ratio while rendering 3D gameplay in crisp widescreen.
+  - **Backbuffer Stall Elimination**: Hooks disable full-frame `GetRenderTargetData` stalls during weather/raindrop refraction.
+  - **Wine Multi-Threading & Unthrottled Pipeline**: Automatically exports `WINE_D3D_CONFIG=csmt=3` (Wine Command Stream Multi-Threading), `vblank_mode=0`, and `__GL_SYNC_TO_VBLANK=0` to eliminate driver vblank frame drops and maximize GPU throughput.
 - **True Hor+ Widescreen & Ultrawide Rendering**:
   - Full support for 1080p, 1440p, 4K, 21:9 ultrawide, and custom resolutions.
   - Hor+ camera frustum scaling keeps vertical field-of-view constant while expanding peripheral vision naturally across the 1st-person world camera, 3rd-person chase camera, and 3D interior cabin camera.
-- **Aspect Ratio Preservation**:
-  - Keeps the original 4:3 2D Main Menu intact with clean pillarboxing while switching seamlessly to full widescreen in 3D driving mode.
 - **Dynamic HUD & Mirror Placement**:
   - Dashboard gauges, speedometers, competition tables, and rearview mirrors are dynamically anchored to the edges of the widescreen viewport rather than floating awkwardly in the middle of the screen.
 - **Modern Hardware & Memory Stability Fixes**:
@@ -50,8 +54,6 @@ This project resolves all of these issues through a combination of an interactiv
   - **>=4 GB RAM Fix**: Prevents `GlobalMemoryStatus` wrap-around from forcing lowest-quality texture models.
   - **CRT Warning Bypass**: Eliminates the legacy "Monitor does not support 1600x1200" warning popup.
   - **Indeo 5 Bypass**: Bypasses crashed legacy intro videos to jump straight into DirectDraw hardware initialization.
-  - **Backbuffer Readback Optimization**: Disables full-frame CPU software readbacks for raindrop distortion, maintaining smooth 60+ FPS in rain.
-  - **Hardware Direct3D Acceleration & Multi-Threading**: Enforces `d3d=on`, hardware flipping, and WineD3D CSMT (`csmt=3`) multi-threading to eliminate software rasterization lag and unlock high framerates on modern GPUs.
 - **Interactive SDL2 Launcher & Headless CLI**:
   - Dual interface: an interactive graphical configuration launcher with keyboard navigation, plus extensive CLI flags for scripting and Steam Deck integration.
 
@@ -226,7 +228,8 @@ Usage: ./king_of_the_road [options]
 │   ├── main_linux.c         # Native SDL2 launcher source
 │   ├── qol_patch.c          # Assembly/C engine hook routines
 │   ├── king_syms.ld         # Linker script placing .qol at VA 0x007bb000
-│   └── patch_king_pe.py     # PE injector and engine bug fix script
+│   ├── patch_king_pe.py     # PE injector and engine bug fix script
+│   └── d2gi/                # D2GI DirectDraw/D3D7 to D3D9 hardware wrapper & config
 ├── king_build/              # Decompiled C code tree for engine research
 ├── Kingoftheroad/           # Ghidra reverse engineering project files
 └── game files/              # Local game directory (ignored by git)
