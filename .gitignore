@@ -1,0 +1,30 @@
+# ==============================================================================
+# Hard Truck 2: King of the Road - Git Ignore Rules
+# ==============================================================================
+
+# Proprietary game assets, data, and original installation files
+game files/
+game files/*
+game-files/
+
+# Backup, log, and temporary files
+*.bak
+*.tmp
+*.log
+warn.log
+
+# Intermediate compiler and linker artifacts
+king_linux_port/*.o
+king_linux_port/*.elf
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS & Editor generated files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~

@@ -159,6 +159,10 @@ def patch_executable(game_dir: str, qol_bin_path: str) -> None:
     write_at_va(0x0052827B, b"\xEB\x60\x90\x90\x90")  # jmp 0x005282dd in FUN_00528000
     write_at_va(0x00510759, b"\xEB\x11")              # jmp 0x0051076c in FUN_00510750
 
+    # 3h. Disable full backbuffer CPU readback for raindrop refraction (keeps DAT_00701510 = 0 in FUN_005a4e10)
+    # Eliminates full-screen GetRenderTargetData / glReadPixels stall on every frame
+    write_at_va(0x005A4E10, b"\x31\xC0\xA3\x10\x15\x70\x00\xC3")  # xor eax, eax; mov ds:0x00701510, eax; ret
+
     with open(king_qol, "wb") as f:
         f.write(pe)
     with open(king_exe, "wb") as f:

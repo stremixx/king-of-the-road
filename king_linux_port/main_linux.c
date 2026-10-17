@@ -278,13 +278,13 @@ static bool ini_get_string(const char *path, const char *section, const char *ke
 }
 
 static void load_config(const char *game_dir, GameConfig *cfg) {
-    /* Defaults: 1920x1080 16:9 Hor+, Fullscreen (desktop borderless via ddraw), FOV 1.60, VSync On, 4x MSAA, 16x AF */
+    /* Defaults: 1920x1080 16:9 Hor+, Fullscreen (desktop borderless via ddraw), FOV 1.60, VSync On, MSAA Off (for maximum performance), 16x AF */
     cfg->width = 1920;
     cfg->height = 1080;
     cfg->fullscreen = true;
     cfg->fov = 1.60;
     cfg->vsync = true;
-    cfg->msaa_idx = 2; /* 4x */
+    cfg->msaa_idx = 0; /* Off (disabled) by default for smooth high FPS */
     cfg->anisotropic = true;
     cfg->skip_intro = true;
     cfg->lock_res = true;
@@ -384,7 +384,7 @@ static bool save_config(const char *game_dir, const GameConfig *cfg) {
         "[dxcfg]\r\n"
         "display=desktop\r\n"
         "presentation=%s\r\n"
-        "aspect=disabled\r\n"
+        "aspect=enabled\r\n"
         "scaling=fit\r\n"
         "vsync=%s\r\n"
         "gamma=1.0\r\n"
