@@ -51,6 +51,7 @@ This project resolves all of these issues through a combination of an interactiv
   - **CRT Warning Bypass**: Eliminates the legacy "Monitor does not support 1600x1200" warning popup.
   - **Indeo 5 Bypass**: Bypasses crashed legacy intro videos to jump straight into DirectDraw hardware initialization.
   - **Backbuffer Readback Optimization**: Disables full-frame CPU software readbacks for raindrop distortion, maintaining smooth 60+ FPS in rain.
+  - **Hardware Direct3D Acceleration & Multi-Threading**: Enforces `d3d=on`, hardware flipping, and WineD3D CSMT (`csmt=3`) multi-threading to eliminate software rasterization lag and unlock high framerates on modern GPUs.
 - **Interactive SDL2 Launcher & Headless CLI**:
   - Dual interface: an interactive graphical configuration launcher with keyboard navigation, plus extensive CLI flags for scripting and Steam Deck integration.
 
@@ -184,7 +185,7 @@ Usage: ./king_of_the_road [options]
 | `-f, --fullscreen` | *None* | Run in borderless desktop fullscreen mode | Active |
 | `-w, --windowed` | *None* | Run in windowed mode | Disabled |
 | `--fov` | `<value>` | Set base 4:3 horizontal frustum width (`1.20` to `2.40`) | `1.60` |
-| `--vsync` | `<on\|off>` | Enable or disable vertical synchronization | `on` |
+| `--vsync` | `<on\|off>` | Enable or disable vertical synchronization (keep `off` to prevent vblank lag) | `off` |
 | `--msaa` | `<off\|2x\|4x\|8x>` | Anti-aliasing quality level (set `off` for best performance) | `off` |
 | `--af` | `<on\|off>` | Enable or disable 16x anisotropic texture filtering | `on` |
 | `--skip-intro` | `<on\|off>` | Skip startup publisher videos | `on` |

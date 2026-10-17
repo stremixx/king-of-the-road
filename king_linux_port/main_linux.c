@@ -278,12 +278,12 @@ static bool ini_get_string(const char *path, const char *section, const char *ke
 }
 
 static void load_config(const char *game_dir, GameConfig *cfg) {
-    /* Defaults: 1920x1080 16:9 Hor+, Fullscreen (desktop borderless via ddraw), FOV 1.60, VSync On, MSAA Off (for maximum performance), 16x AF */
+    /* Defaults: 1920x1080 16:9 Hor+, Fullscreen (desktop borderless via ddraw), FOV 1.60, VSync Off (for high FPS & no lag), MSAA Off, 16x AF */
     cfg->width = 1920;
     cfg->height = 1080;
     cfg->fullscreen = true;
     cfg->fov = 1.60;
-    cfg->vsync = true;
+    cfg->vsync = false; /* Disabled by default for maximum framerate and no vblank stutter */
     cfg->msaa_idx = 0; /* Off (disabled) by default for smooth high FPS */
     cfg->anisotropic = true;
     cfg->skip_intro = true;
@@ -410,9 +410,9 @@ static bool save_config(const char *game_dir, const GameConfig *cfg) {
         "[ENV]\r\n"
         "xres=800\r\n"
         "yres=600\r\n"
-        "fullscreen=off\r\n"
+        "fullscreen=%s\r\n"
         "cres=1\r\n"
-        "d3d=off\r\n"
+        "d3d=on\r\n"
         "sound=on\r\n"
         "joystick=on\r\n"
         "bordin=on\r\n"
@@ -513,13 +513,14 @@ static bool save_config(const char *game_dir, const GameConfig *cfg) {
         "vpal=0\r\n"
         "vpasl=0\r\n"
         "name=Primary Display Driver\r\n"
-        "tmem=261448192\r\n"
-        "vmem=261448192\r\n"
+        "tmem=536870912\r\n"
+        "vmem=536870912\r\n"
         "[DRV2]\r\n"
         "vpas=1\r\n"
         "vpam=1\r\n"
         "vpal=1\r\n"
         "vpasl=1\r\n",
+        cfg->fullscreen ? "on" : "off",
         cfg->width, cfg->height,
         cfg->lock_res ? 1 : 0,
         cfg->skip_intro ? 1 : 0,
@@ -921,6 +922,16 @@ int main(int argc, char **argv) {
 
     /* Set WINEDLLOVERRIDES so Wine loads GOG's DirectDraw->D3D9 widescreen/scaling wrapper (ddraw.dll) */
     setenv("WINEDLLOVERRIDES", "ddraw=n,b", 1);
+
+    /* Performance Optimizations:
+     * - vblank_mode=0 / __GL_SYNC_TO_VBLANK=0: Disable driver-enforced vblank throttling on Mesa / Intel UHD / AMD / NVIDIA
+     * - WINE_D3D_CONFIG=csmt=3: Enable Command Stream Multi-Threading in WineD3D for 2x-3x higher draw throughput
+     * - WINEDEBUG=-all: Suppress wine debug/trace logging overhead to maximize framerates
+     */
+    setenv("vblank_mode", "0", 1);
+    setenv("__GL_SYNC_TO_VBLANK", "0", 1);
+    setenv("WINE_D3D_CONFIG", "csmt=3", 1);
+    setenv("WINEDEBUG", "-all", 1);
 
     printf("[*] Launching Hard Truck 2: King of the Road (%dx%d)...\n", cfg.width, cfg.height);
     fflush(stdout);
