@@ -1,0 +1,14 @@
+
+void FUN_0062b240(void)
+
+{
+  FUN_0061d86c(&DAT_006852e0,s__s__00689030,DAT_00769efc);
+  FUN_00630f2b(&DAT_0072d488);
+  if (DAT_00779f68 != 0) {
+    FUN_0062a020(&DAT_007355d4);
+    FUN_00631437(&DAT_0072d488);
+  }
+  FUN_0062aab0(1);
+  return;
+}
+

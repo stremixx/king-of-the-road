@@ -1,0 +1,337 @@
+// Please alter only double quoted lines (C-style) with respect of comments
+// Do not remove lines! They should stay where they are, in terms of line count
+// Empty double-quoted lines are reserved, so they should stay empty.
+// Do not alter format marks like %d or %-8s (always start with % and end with letter) 
+// the numbers or strings will be inserted instead of them by program.
+// Also the numbers following backslash (like \202) should not be changed
+// first number in the comment to the right, where present, is the maximum 
+// number of symbols allowed for the string (not counting the double quotes)
+
+"Internal error, please contact" 	// error message
+"Installation is required" 		// error message
+"Setup is required" 			// error message
+"Laps made : %d of %d." 		// 64 Laps count in circuit race
+"You did not follow direction signs." 	// 64 Circuit is run in illegal order/direction
+"Restart please."  			// 64 Restart the game 
+"Checkpoint" 				// 64 Checkpoint in circuit races
+"Wait until the clients start" 		// 64 A message for host in multi-player mode
+"Wait until the server starts" 		// 64 A message for client in multi-player mode
+"RESCUE SERVICE CHARGES $%d" 		// 48 charges for 911 service
+"REPAIR COST $%d" 			// 48 charged by repair station
+"REFUEL COST $%d" 			// 48 charged by gas station
+"NOT ENOUGH MONEY" 			// 48 to purchase something
+"Insert CD 'King Of The Road'" 		// 40
+"On the road" 			// 16 Title of the ESC-menus
+"Driver %-8s" 			// Driver's name
+"Key Mapping" 			// 16 Keyboard keys layout 
+"Unload cargo" 			// 16 Unload truck
+"Load cargo" 			// 16 Load truck
+"Player Info" 			// 16 Information about player (truck, order)
+"Rating" 			// 16 Rating of companies and players
+"Map On/Zoom/Off" 		// 16 Toggle map between whole area map, local area map, and no map
+"Camera further" 		// 16 Move external camera further
+"Camera closer" 		// 16 Move external camera closer
+"Look Right" 			// 16 Turn head to the right
+"Look Left" 			// 16 Turn head to the left
+"Outside View" 			// 16 Toggle to/from external camera
+"View \203" 			// 16 Move external camera (to the left)
+"View \202" 			// 16 Move external camera (to the right)
+"Wipers On/Off" 		// 16 Toggle windshield wipers on/off
+"Horn" 				// 16 Make signal with a horn
+"Kick down" 			// 16 Accelerate abruptly
+"Reverse Gear"			// 16
+"1-st Gear"			// 16
+"Manual gear box"		// 16
+"Gear Down"			// 16 
+"Gear Up"			// 16
+"Parking Brake"			// 16
+"Brake"				// 16
+"Acceleration"			// 16
+"Steer Right"			// 16
+"Steer Left"			// 16
+"Reinstall."			// Please reinstall the game
+"The version of DirectX installed"	// 40 These three lines are one sentence
+"on your computer does not"		// 40	
+"support the selected video mode"	// 40
+"Not enough texture memory"		// 40 These two lines are one sentence
+"on your accelerator"			// 40
+"DRIVER"			// 16 Default name for player
+"THIS COPY OF THE"			// 40 These two lines are one sentence
+"'King Of The Road' GAME IS ILLEGAL."	// 40
+"Press Num <+> to repair"	// 64
+"Press Num <+> to refuel"	// 64
+"fuel"				//
+"STOP THE VEHICLE AT ONCE!"		// 48 Message from police
+"STOP THE VEHICLE OR ELSE WE SHOOT!"	// 48 Message from police
+"UNLOADING POINT"		// 20 unloading gate of depot
+"Press Num<+>/<-> to load/unload"	// 64 to take load at depot
+"Press Num<+> to buy"			// 64 to buy a truck
+"Press Num<-> to unload"		// 64 to unload the truck
+"LOADING POINT"			// 20 loading gate of depot
+"INFORMATION"			// info booth of depot
+"Headlight"			// 16 Toggle headlight on/off
+"Start Engine"			// 16 Start/stop engine
+"Hook Trailer"			// 16
+"Browse Pager"			// 16
+"My Company"			// 16
+"Server not found"		// 40 Error message in multi-player mode
+"Connection error"		// 40 Error message in multi-player mode
+"%.2fh.p."			// 9 h.p. = horse power (please do not alter to different units, e.g. kW)
+"%.2ft"				// 6 t = ton (please do not alter to different units)
+"%.2fm3"			// 7 m3 = cubic meter (please do not alter to different units)
+"Press Num <+> to hire"		// 64 to hire a driver
+"HEY, BUDDY, PULL OVER!"	// 48 A message from mafia
+"Please wait"			// 40 A message in multi-player mode
+"You are connected. Please wait"	// 40 A message in multi-player mode
+"Wait for everybody:"		// 40 A message in multi-player mode
+"Enter the server IP address or domain"	// 40 These three lines are one sentence
+"name, or leave the field blank if it "	// 40
+"is on the same subnet"		// 40
+"Enter the server phone number"	// 40 Multi-player game, modem connection
+"movie"				// 12
+"game"				// 12
+"steer abruptly"		// 16 steer faster
+"High/low beam"			// 16 Toggle headlights between high and low beam
+"EMPTY"				// 12 Name for free position for saved game
+"YOU MADE $%d"			// 48 Message about money get for order
+"NO ENTRY. FIRE FOR EFFECT"	// 48 From police, when entering prohibited area
+"Circuit"			// DON'T TRANSLATE PLEASE!!!
+"YOU ARE"			// 8 You are (Nth in competition)
+"TIME LEFT"			// 10 ...before the order expires
+"AUTOGEAR %c"			// 14 No. of gear indication
+"MANUAL GEAR %c"		// 14 No. of gear indication
+"km/h"				// 4 Do not change to different units!
+"x100 RpM"			// 8 tachometer, revolutions per minute
+"of"				// 2 (You are Nth) OF (M) (in competition)
+"Change driver"			// 40
+"N,1st-9th gear"		// 16
+"Ready"				// 10 Message in multi-player mode
+"Not ready"			// 10 Message in multi-player mode
+"FIRE PROTECTION DEPLETED"	// 48
+"LICENSES"			// 9 Licences to hire the player has got
+"Monitor On/Off"		// 16 Switch the rear view monitor on/off
+"QSAVE"				// 12 Name for quick-saved game
+"Quick Save"			// 16 Save game by one key
+"Quick Load"			// 16 Load quck-saved game
+"CB radio"			// 16 Switch SB-radio on
+"Screen shot"			// 16 Capture a screen
+"Pause"				// 16
+"Stolen"			// 14 Stolen truck 
+"Used"				// 14 Second hand truck
+"NOBODY"			// 16 No one on air (CB radio) 
+"POLICE"			// 16 Police on air (CB radio) 
+"MAFIA"				// 16 Mafia on air (CB radio) 
+"OPPONENT"			// 16 Opponent in competition on air (CB radio) 
+"VEHICLE DEALER"		// 16 Truck dealer on air (CB radio) 
+"ANOTHER DRIVER"		// 16 Any other driver on air (CB radio) 
+"You are out of gas"		// 64 No more fuel
+"Press <Space Bar> to start engine"	// 64  
+"THEY PALMED A USED VEHICLE ON YOU"	// 48 Message from repair service
+"The requested video mode will now"	// 40 These three lines are one sentence
+"be set. In a case of a failure,"	// 40 (regarding 1600x1200 mode)
+"1024x768 video mode will be set."	// 40
+"Video mode was changed."	// 40 1600x1200 mode
+"Do you want to keep it?"	// 40 1600x1200 mode
+"Reverting in %d sec"		// 40 1600x1200 mode
+
+/* Tool tips*/
+
+"ignore changes"			// 60 CANCEL
+"record and playback of game episode"	// 60 TAPE RECORDER
+"run the game in single player mode"	// 60 SINGLE PLAYER
+"customize controllers"			// 60 CONTROLLERS
+"run the game in multiplayer mode"	// 60 MULTIPLAYER
+"player settings"			// 60 CHANGE PLAYER
+"show demo movie"		// 60 DEMO
+"graphics settings"		// 60 GRAPHICS
+"exit to system"		// 60 EXIT
+"run new game"			// 60 NEW GAME
+
+"run saved game"		// 60 LOAD GAME
+"set the level of complexity"	// 60 ARCADE/SIMULATOR
+"set the level of complexity"	// 60 ARCADE/SIMULATOR
+"traffic: light/hard"		// 60 TRAFFIC
+"day: short/long"		// 60 DAY
+"weather: bad/good"		// 60 WEATHER
+"load a previously saved game"	// 60 LOAD GAME
+"select a saved game"		// 60 from saved games list
+"play as client"		// 60 CLIENT
+"play as server"		// 60 HOST
+"choose your vehicle"		// 60 truck>>
+
+"choose your vehicle"		// 60 <<truck
+"choose vehicle color"		// 60 COLOR
+"choose connection type"	// 60 from connection types list
+"next step"			// 60 NEXT
+"choose your name"		// 60 from list
+"type your name"		// 60  
+"delete the driver with the indicated name"	// 60 DELETE
+"next logo"			// 60 logo>>
+"previous logo"			// 60 <<logo
+"next photo"			// 60 photo>>
+"previous photo"		// 60 <<photo
+"detect 3D card"		// 60 AUTODETECT
+"previous 3D card"		// 60 <<3d card
+"next 3D card"			// 60 3d card>>
+"640x480"			// 60 screen resolution
+"800x600"			// 60 screen resolution
+"1024x768"			// 60 screen resolution
+"1600x1200"			// 60 screen resolution
+"level of details: lower/higher"	// 60 DETAILS
+"graphics: faster/better"	// 60 SPECIAL EFFECTS
+"default control mapping"	// 60 DEFAULT	
+
+"previous control device"	// 60 <<control device
+"next control device"		// 60 control device>>
+"click to reassign"		// 60 any control key to change it
+"play the movie"		// 60 REPLAY
+"record mode on/off"		// 60 RECORD
+""				// 60 reserved
+"new movie name"		// 60 enter name
+"choose the movie for playback"	// 60 from movies list
+"choose competition"		// 60 CIRCUIT
+"choose competition"		// 60 TRUCK BALL
+"choose competition"		// 60 TRIAL
+"exit to system"		// 60 EXIT
+
+"do not exit"			// 60 CANCEL
+"quit multiplayer game"		// 60 CANCEL
+"keep waiting"			// 60 
+"click if all of the players are already in the list"	// 60 START
+"set new video mode"		// 60 change video mode
+"select video mode"		// 60 select new video mode
+"keep video mode"		// 60 preserve video mode
+"set 1024x768 video mode"	// 60 instead of 1600x1200
+
+/*Esc menu*/
+"click when everybody is ready"	// 60 START
+"return to main menu"		// 60 MAIN MENU
+"adjust sound"			// 60 SOUND
+"adjust controls"		// 60 CONTROL
+"call for help"			// 60 911
+"save current game"		// 60 SAVE
+"restart current game"		// 60 RESTART
+"quit the game and return to desktop"	// 60 EXIT
+"save and exit"			// 60 SAVE
+"exit without save"		// 60 DO NOT SAVE
+"resume the game"		// 60 CANCEL
+"save under indicated name"	// 60 SAVE
+"type the name or choose one of listed names"	// 60 name for saved game
+"steering wheel sensitivity: less/more"		//  60 STEERING SENSITIVITY
+"steering wheel centering force: less/more"	// 60 CENTERING FORCE
+"steering wheel force feedback: less/more"	// 60 FORCE FEEDBACK
+"automatic/manual transmission"		// 60 AUTO GEAR BOX
+"",				// reserved
+"main volume: less/more"	// 60 MAIN VOLUME
+"music volume: less/more"	// 60 MUSIC VOLUME
+"engine volume: less/more"	// 60 ENGINE VOLUME
+"skid volume: less/more"	// 60 SKID VOLUME
+"save changes"			// 60 OK
+"change places with indicated driver"		// 60 CHANGE PLACES
+"fire indicated driver"		// 60 FIRE
+"indicate hired driver"		// 60 in drivers list
+
+/*CB radio*/
+"search for the next station "	// 60 SEARCH
+"talk to indicated station"	// 60 TALK
+"bribe to avoid the ticket"	// 60 to policeman
+"bribe to have the cops protect you from the bad guys"	// 60 to policeman
+"bribe to have the cops hinder your rival"	// 60 to policeman
+"end the dialog"		// 60 bye
+"paying the mafia to leave you alone for the trip"	// 60 to gangster
+"paying the mafia to have them rob your rival"	// 60 to gangster
+"paying the mafia to have a vehicle hauled for you to buy"	// 60 to gangster
+"end the dialog"		// 60 bye
+"bribe to have your rival leave the competition"	// 60 to competitor
+"bribe to have your competitor dump the cargo on the ground"	// 60 to competitor
+"end the dialog"		// 60 bye
+""				// reserved
+"asking the driver to help you fix your car"	// 60 to another driver/truck dealer
+"asking the dealer to have a vehicle hauled for you to buy"	// 60 to truck dealer
+"end the dialog"		// 60 bye
+""				// 60 reserved
+"agree to pay"			// 60 ok
+"change your mind"		// 60 next time
+
+/*Replay*/
+"video-search"			// 60 jog-shuttle
+"video-search"			// 60 jog-shuttle
+"playback (forward)"		// 60 >
+"playback (backward)"		// 60 <
+"pause"				// 60 ||
+"one frame forward"		// 60 >|
+"one frame backward"		// 60 |<
+"go to the beginning"		// 60 |<<
+"exit"				// 60 power off button
+
+/*Upgrades*/
+"helps to preserve fragile load"	// 60 ADJUSTABLE SUSPENSION 
+""				// reserved
+"increases brakes efficiency"	// 60 ENGINE BRAKES
+""				// reserved
+"reduces brake wear"		// 60 VENILATED BRAKES
+""				// reserved
+"more damage-proof one"		// 60 REINFORCED CHASSIS
+""				// reserved
+"protects you from bullets"	// 60 BULLET-PROOF GLASS 
+""				// reserved
+"will protect your headlights"	// 60 HEADLIGHT PROTECTION
+""				// reserved
+"increases engine power"	// 60 FORCED ENGINE
+""				// reserved
+"reduces fuel consumption"	// 60 OIL ADDITIVE
+""				// reserved
+"enables you to cross shallow water"	// 60 AIR FILTER SNORKEL 
+""				// reserved
+"improves speed and stability"	// 60 HI-WAY TIRES
+""				// reserved
+"improve cross-country capability"	// 60 OFF-ROAD TIRES
+""				// reserved
+"enables you to refuel less often"	// 60 EXTRA TANK
+""				// reserved
+"reduces skid"			// 60 ABS
+""				// reserved
+"will warn you about a radar"	// 60 RADAR SCANNER
+""				// reserved
+"police radar will not detect you	// 60 STEALTH BODY PAINT
+"				// reserved
+"won't let them cheat you"	// 60 CARGO SCANNER
+""				// reserved
+"will extinguish a fire"	// 60 FIRE PROTECTION
+""				// reserved
+"will show you the way"		// 60 NAVIGATOR
+""				// reserved
+"another sound"			// 60 HORN
+""				// reserved
+"install everything"		// 60 all upgrades
+""				// reserved
+"repair engine"			// 60 at repair service
+""				// reserved
+"repair steering gear"		// 60 at repair service
+""				// reserved
+"repair transmission"		// 60 at repair service
+""				// reserved
+"repair brake system"		// 60 at repair service
+""				// reserved
+"repair headlights"		// 60 at repair service
+""				// reserved
+"repair body"			// 60 at repair service
+""				// reserved
+"repair tires"			// 60 at repair service
+""				// reserved
+"full repair"			// 60 at repair service
+""				// reserved
+"start with a car"		// 60 CAR at main menu
+"start with a truck"		// 60 TRUCK at main menu
+"pay for the fuel"		// 60 at gas station
+"full tank"			// 60 at gas station
+""				// reserved
+"fuel quantity"			// 60 at gas station
+"pay for the service"		// 60 at repair service
+"Stop and press Num <+> to get serviced"	// 64 at repair service and gas station
+"delete the movie with the indicated name"	// 60 DELETE
+"delete the game with the indicated name"	// 60 DELETE
+"Connection with the server lost" // 40 A message for clients in multi-player mode
+
+
+

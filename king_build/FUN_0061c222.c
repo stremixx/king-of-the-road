@@ -1,0 +1,13 @@
+
+void FUN_0061c222(void)
+
+{
+  PTR_FUN_00685918 = &LAB_00620588;
+  PTR_FUN_00685914 = __cfltcvt;
+  PTR_FUN_0068591c = __fassign;
+  PTR_FUN_00685920 = FUN_0062052e;
+  PTR_FUN_00685924 = &LAB_006205d6;
+  PTR_FUN_00685928 = __cfltcvt;
+  return;
+}
+

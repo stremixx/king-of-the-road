@@ -1,0 +1,1436 @@
+CLUSTER Fiat1_car_cl
+txr\Fiat_all1.txr
+txr\Fiat_alld1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Fiat2_car_cl
+txr\Fiat_all2.txr
+txr\Fiat_alld2.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Fiat3_car_cl
+txr\Fiat_all3.txr
+txr\Fiat_alld3.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Fiat4_car_cl
+txr\Fiat_all4.txr
+txr\Fiat_alld4.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER PFiat1_car_cl
+txr\PFiat_all1.txr
+txr\PFiat_alld1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PFiat2_car_cl
+txr\PFiat_all2.txr
+txr\PFiat_alld2.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PFiat3_car_cl
+txr\PFiat_all3.txr
+txr\PFiat_alld3.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PFiat4_car_cl
+txr\PFiat_all4.txr
+txr\PFiat_alld4.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER Volga1_car_cl
+txr\volga_all1.txr
+txr\volga_alld1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Volga2_car_cl
+txr\volga_all2.txr
+txr\volga_alld2.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Volga3_car_cl
+txr\volga_all3.txr
+txr\volga_alld3.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Volga4_car_cl
+txr\volga_all4.txr
+txr\volga_alld4.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER PVolga1_car_cl
+txr\pvolga_all1.txr
+txr\pvolga_alld1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PVolga2_car_cl
+txr\pvolga_all2.txr
+txr\pvolga_alld2.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PVolga3_car_cl
+txr\pvolga_all3.txr
+txr\pvolga_alld3.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PVolga4_car_cl
+txr\pvolga_all4.txr
+txr\pvolga_alld4.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER Avensis1_car_cl
+txr\avensis_all1.txr
+txr\avensis_alld1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Avensis2_car_cl
+txr\avensis_all2.txr
+txr\avensis_alld2.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Avensis3_car_cl
+txr\avensis_all3.txr
+txr\avensis_alld3.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Avensis4_car_cl
+txr\avensis_all4.txr
+txr\avensis_alld4.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER PAvensis1_car_cl
+txr\pavensis_all1.txr
+txr\pavensis_alld1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PAvensis2_car_cl
+txr\pavensis_all2.txr
+txr\pavensis_alld2.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PAvensis3_car_cl
+txr\pavensis_all3.txr
+txr\pavensis_alld3.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PAvensis4_car_cl
+txr\pavensis_all4.txr
+txr\pavensis_alld4.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER PMarera1_car_cl
+txr\pmarera_all1.txr
+txr\pmarera_alld1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PMarera2_car_cl
+txr\pmarera_all2.txr
+txr\pmarera_alld2.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PMarera3_car_cl
+txr\pmarera_all3.txr
+txr\pmarera_alld3.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PMarera4_car_cl
+txr\pmarera_all4.txr
+txr\pmarera_alld4.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER PMegan1_car_cl
+txr\pmegan_all1.txr
+txr\pmegan_alld1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PMegan2_car_cl
+txr\pmegan_all2.txr
+txr\pmegan_alld2.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PMegan3_car_cl
+txr\pmegan_all3.txr
+txr\pmegan_alld3.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PMegan4_car_cl
+txr\pmegan_all4.txr
+txr\pmegan_alld4.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER PMini1_car_cl
+txr\pmini_all1.txr
+txr\pmini_alld1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PMini2_car_cl
+txr\pmini_all2.txr
+txr\pmini_alld2.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PMini3_car_cl
+txr\pmini_all3.txr
+txr\pmini_alld3.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PMini4_car_cl
+txr\pmini_all4.txr
+txr\pmini_alld4.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER POka1_car_cl
+txr\poka_all1.txr
+txr\poka_alld1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER POka2_car_cl
+txr\poka_all2.txr
+txr\poka_alld2.txr
+txr\PJeep_engine.txr
+END
+CLUSTER POka3_car_cl
+txr\poka_all3.txr
+txr\poka_alld3.txr
+txr\PJeep_engine.txr
+END
+CLUSTER POka4_car_cl
+txr\poka_all4.txr
+txr\poka_alld4.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER PVan1_car_cl
+txr\pvan_all1.txr
+txr\pvan_alld1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PVan2_car_cl
+txr\pvan_all2.txr
+txr\pvan_alld2.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PVan3_car_cl
+txr\pvan_all3.txr
+txr\pvan_alld3.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PVan4_car_cl
+txr\pvan_all4.txr
+txr\pvan_alld4.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER STrailerT1_car_cl
+txr\STrailerTank_hat1.txr
+txr\STrailerTank_cyl1.txr
+txr\STrailerTank_hatch1.txr
+txr\STrailerTank_BS1.txr
+txr\STrailerTank_BT1.txr
+txr\STrailerTank_hatd1.txr
+txr\STrailerTank_cyld1.txr
+txr\STrailerTank_BSd1.txr
+txr\STrailerTank_BTd1.txr
+END
+CLUSTER STrailerT2_car_cl
+txr\STrailerTank_hat2.txr
+txr\STrailerTank_cyl2.txr
+txr\STrailerTank_hatch2.txr
+txr\STrailerTank_BS2.txr
+txr\STrailerTank_BT2.txr
+txr\STrailerTank_hatd2.txr
+txr\STrailerTank_cyld2.txr
+txr\STrailerTank_BSd2.txr
+txr\STrailerTank_BTd2.txr
+END
+CLUSTER STrailerT3_car_cl
+txr\STrailerTank_hat3.txr
+txr\STrailerTank_cyl3.txr
+txr\STrailerTank_hatch3.txr
+txr\STrailerTank_BS3.txr
+txr\STrailerTank_BT3.txr
+txr\STrailerTank_hatd3.txr
+txr\STrailerTank_cyld3.txr
+txr\STrailerTank_BSd3.txr
+txr\STrailerTank_BTd3.txr
+END
+CLUSTER STrailerT4_car_cl
+txr\STrailerTank_hat4.txr
+txr\STrailerTank_cyl4.txr
+txr\STrailerTank_hatch4.txr
+txr\STrailerTank_BS4.txr
+txr\STrailerTank_BT4.txr
+txr\STrailerTank_hatd4.txr
+txr\STrailerTank_cyld4.txr
+txr\STrailerTank_BSd4.txr
+txr\STrailerTank_BTd4.txr
+END
+
+CLUSTER Katok_car_cl
+txr\roller_rule.txr
+txr\roller_body.txr
+txr\roller_butt.txr
+txr\roller_cyl.txr
+txr\roller_engine.txr
+txr\roller_priborBACK.txr
+txr\roller_priborFACE.txr
+txr\roller_rust.txr
+txr\roller_seatBACK.txr
+txr\roller_seatDOWN.txr
+txr\roller_sign.txr
+END
+
+CLUSTER Bus1_car_cl
+txr\bus_all1.txr
+END
+CLUSTER Bus2_car_cl
+txr\bus_all2.txr
+END
+CLUSTER Bus3_car_cl
+txr\bus_all3.txr
+END
+CLUSTER Bus4_car_cl
+txr\bus_all4.txr
+END
+
+CLUSTER PBus1_car_cl
+txr\bus_all1.txr
+END
+CLUSTER PBus2_car_cl
+txr\bus_all2.txr
+END
+CLUSTER PBus3_car_cl
+txr\bus_all3.txr
+END
+CLUSTER PBus4_car_cl
+txr\bus_all4.txr
+END
+
+CLUSTER Marera1_car_cl
+txr\marera_all1.txr
+txr\marera_alld1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Marera2_car_cl
+txr\marera_all2.txr
+txr\marera_alld2.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Marera3_car_cl
+txr\marera_all3.txr
+txr\marera_alld3.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Marera4_car_cl
+txr\marera_all4.txr
+txr\marera_alld4.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER Megan1_car_cl
+txr\megan_all1.txr
+txr\megan_alld1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Megan2_car_cl
+txr\megan_all2.txr
+txr\megan_alld2.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Megan3_car_cl
+txr\megan_all3.txr
+txr\megan_alld3.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Megan4_car_cl
+txr\megan_all4.txr
+txr\megan_alld4.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER Mini1_car_cl
+txr\mini_all1.txr
+txr\mini_alld1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Mini2_car_cl
+txr\mini_all2.txr
+txr\mini_alld2.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Mini3_car_cl
+txr\mini_all3.txr
+txr\mini_alld3.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Mini4_car_cl
+txr\mini_all4.txr
+txr\mini_alld4.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER Oka1_car_cl
+txr\oka_all1.txr
+txr\oka_alld1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Oka2_car_cl
+txr\oka_all2.txr
+txr\oka_alld2.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Oka3_car_cl
+txr\oka_all3.txr
+txr\oka_alld3.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Oka4_car_cl
+txr\oka_all4.txr
+txr\oka_alld4.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER Van1_car_cl
+txr\van_all1.txr
+txr\van_alld1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Van2_car_cl
+txr\van_all2.txr
+txr\van_alld2.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Van3_car_cl
+txr\van_all3.txr
+txr\van_alld3.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Van4_car_cl
+txr\van_all4.txr
+txr\van_alld4.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER k50_car_cl
+txr\Ka50glow.txr
+txr\Ka50glowO.txr
+txr\Ka50glowR.txr
+txr\Ka50glowG.txr
+txr\Ka50vint.txr
+txr\Ka50vint.txr
+txr\Ka50p.txr
+txr\Ka50p.txr
+txr\Ka50shadow.txr
+txr\Ka50all.txr
+txr\Ka50shot.txr
+END
+
+CLUSTER Gazelle1C_car_cl
+txr\Gazelle_all.txr
+txr\Gazelle_alld.txr
+txr\Gazelle_1C.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER Gazelle1_car_cl
+txr\Gazelle_all1.txr
+txr\Gazelle_alld1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Gazelle2_car_cl
+txr\Gazelle_all2.txr
+txr\Gazelle_alld2.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Gazelle3_car_cl
+txr\Gazelle_all3.txr
+txr\Gazelle_alld3.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Gazelle4_car_cl
+txr\Gazelle_all4.txr
+txr\Gazelle_alld4.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER PGazelle1_car_cl
+txr\PGazelle_all1.txr
+txr\PGazelle_alld1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PGazelle2_car_cl
+txr\PGazelle_all2.txr
+txr\PGazelle_alld2.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PGazelle3_car_cl
+txr\PGazelle_all3.txr
+txr\PGazelle_alld3.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PGazelle4_car_cl
+txr\PGazelle_all4.txr
+txr\PGazelle_alld4.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER Sobol1_car_cl
+txr\Sobol_all1.txr
+txr\Sobol_alld1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Sobol2_car_cl
+txr\Sobol_all2.txr
+txr\Sobol_alld2.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Sobol3_car_cl
+txr\Sobol_all3.txr
+txr\Sobol_alld3.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Sobol4_car_cl
+txr\Sobol_all4.txr
+txr\Sobol_alld4.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER PSobol1_car_cl
+txr\PSobol_all1.txr
+txr\PSobol_alld1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PSobol2_car_cl
+txr\PSobol_all2.txr
+txr\PSobol_alld2.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PSobol3_car_cl
+txr\PSobol_all3.txr
+txr\PSobol_alld3.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PSobol4_car_cl
+txr\PSobol_all4.txr
+txr\PSobol_alld4.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER Patrol1_car_cl
+txr\Patrol_all1.txr
+txr\Patrol_alld1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Patrol2_car_cl
+txr\Patrol_all2.txr
+txr\Patrol_alld2.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Patrol3_car_cl
+txr\Patrol_all3.txr
+txr\Patrol_alld3.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Patrol4_car_cl
+txr\Patrol_all4.txr
+txr\Patrol_alld4.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER PPatrol1_car_cl
+txr\PPatrol_all1.txr
+txr\PPatrol_alld1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PPatrol2_car_cl
+txr\PPatrol_all2.txr
+txr\PPatrol_alld2.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PPatrol3_car_cl
+txr\PPatrol_all3.txr
+txr\PPatrol_alld3.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PPatrol4_car_cl
+txr\PPatrol_all4.txr
+txr\PPatrol_alld4.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER Pickup1_car_cl
+txr\Pickup_all1.txr
+txr\Pickup_alld1.txr
+txr\Pickup_roof1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Pickup2_car_cl
+txr\Pickup_all2.txr
+txr\Pickup_alld2.txr
+txr\Pickup_roof2.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER PPickup1_car_cl
+txr\PPickup_all1.txr
+txr\PPickup_alld1.txr
+txr\PPickup_roof1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER PPickup2_car_cl
+txr\PPickup_all2.txr
+txr\PPickup_alld2.txr
+txr\PPickup_roof2.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER Offroad1_car_cl
+txr\Offroad_all1.txr
+txr\Offroad_alld1.txr
+txr\Offroad_roof1.txr
+txr\Jeep_engine.txr
+END
+CLUSTER Offroad2_car_cl
+txr\Offroad_all2.txr
+txr\Offroad_alld2.txr
+txr\Offroad_roof2.txr
+txr\Jeep_engine.txr
+END
+
+CLUSTER POffroad1_car_cl
+txr\POffroad_all1.txr
+txr\POffroad_alld1.txr
+txr\POffroad_roof1.txr
+txr\PJeep_engine.txr
+END
+CLUSTER POffroad2_car_cl
+txr\POffroad_all2.txr
+txr\POffroad_alld2.txr
+txr\POffroad_roof2.txr
+txr\PJeep_engine.txr
+END
+
+CLUSTER StormR1_car_cl
+txr\Storm_all1.txr
+txr\Storm_carriage.txr
+END
+CLUSTER StormR2_car_cl
+txr\Storm_all2.txr
+txr\Storm_carriage.txr
+END
+CLUSTER StormR3_car_cl
+txr\Storm_all3.txr
+txr\Storm_carriage.txr
+END
+CLUSTER StormR4_car_cl
+txr\Storm_all4.txr
+txr\Storm_carriage.txr
+END
+
+CLUSTER Storm1_car_cl
+txr\Storm_all1.txr
+END
+CLUSTER Storm2_car_cl
+txr\Storm_all2.txr
+END
+CLUSTER Storm3_car_cl
+txr\Storm_all3.txr
+END
+CLUSTER Storm4_car_cl
+txr\Storm_all4.txr
+END
+
+CLUSTER STrailerStorm_car_cl
+txr\STrailerStorm_all.txr
+END
+
+CLUSTER BmwM51_car_cl
+txr\BMW_all1.txr
+txr\BMW_alld1.txr
+END
+CLUSTER BmwM52_car_cl
+txr\BMW_all2.txr
+txr\BMW_alld2.txr
+END
+CLUSTER BmwM53_car_cl
+txr\BMW_all3.txr
+txr\BMW_alld3.txr
+END
+CLUSTER BmwM54_car_cl
+txr\BMW_all4.txr
+txr\BMW_alld4.txr
+END
+CLUSTER BmwM5police_car_cl
+txr\BMW_all.txr
+txr\BMW_alld.txr
+txr\BMW_police.txr
+txr\effect_CopLight.txr
+END
+
+CLUSTER PBmwM51_car_cl
+txr\PBMW_all1.txr
+txr\PBMW_alld1.txr
+END
+CLUSTER PBmwM52_car_cl
+txr\PBMW_all2.txr
+txr\PBMW_alld2.txr
+END
+CLUSTER PBmwM53_car_cl
+txr\PBMW_all3.txr
+txr\PBMW_alld3.txr
+END
+CLUSTER PBmwM54_car_cl
+txr\PBMW_all4.txr
+txr\PBMW_alld4.txr
+END
+
+
+CLUSTER International1_car_cl
+txr\International_kabine1.txr
+txr\International_parts1.txr
+txr\International_tube1.txr
+txr\International_pb1.txr
+END
+CLUSTER International2_car_cl
+txr\International_kabine2.txr
+txr\International_parts2.txr
+txr\International_tube2.txr
+txr\International_pb2.txr
+END
+CLUSTER International3_car_cl
+txr\International_kabine3.txr
+txr\International_parts3.txr
+txr\International_tube3.txr
+txr\International_pb3.txr
+END
+CLUSTER International4_car_cl
+txr\International_kabine4.txr
+txr\International_parts4.txr
+txr\International_tube4.txr
+txr\International_pb4.txr
+END
+
+CLUSTER Volvo1_car_cl
+txr\Volvo_kabine1.txr
+txr\Volvo_kapot1.txr
+txr\Volvo_parts1.txr
+txr\Volvo_wing1.txr
+END
+CLUSTER Volvo2_car_cl
+txr\Volvo_kabine2.txr
+txr\Volvo_kapot2.txr
+txr\Volvo_parts2.txr
+txr\Volvo_wing2.txr
+END
+CLUSTER Volvo3_car_cl
+txr\Volvo_kabine3.txr
+txr\Volvo_kapot3.txr
+txr\Volvo_parts3.txr
+txr\Volvo_wing3.txr
+END
+CLUSTER Volvo4_car_cl
+txr\Volvo_kabine4.txr
+txr\Volvo_kapot4.txr
+txr\Volvo_parts4.txr
+txr\Volvo_wing4.txr
+END
+
+
+CLUSTER Mercedes1_car_cl
+txr\Mercedes_BackWing1.txr
+txr\Mercedes_kabBACK1.txr
+txr\Mercedes_kabFRONT1.txr
+txr\Mercedes_kabSIDE1.txr
+txr\Mercedes_kabTOP1.txr
+txr\Mercedes_kapote1.txr
+txr\Mercedes_stupen1.txr
+txr\Mercedes_parts1.txr
+txr\Mercedes_butt1.txr
+txr\Mercedes_air1.txr
+END
+CLUSTER Mercedes2_car_cl
+txr\Mercedes_BackWing2.txr
+txr\Mercedes_kabBACK2.txr
+txr\Mercedes_kabFRONT2.txr
+txr\Mercedes_kabSIDE2.txr
+txr\Mercedes_kabTOP2.txr
+txr\Mercedes_kapote2.txr
+txr\Mercedes_stupen2.txr
+txr\Mercedes_parts2.txr
+txr\Mercedes_butt2.txr
+txr\Mercedes_air2.txr
+END
+CLUSTER Mercedes3_car_cl
+txr\Mercedes_BackWing3.txr
+txr\Mercedes_kabBACK3.txr
+txr\Mercedes_kabFRONT3.txr
+txr\Mercedes_kabSIDE3.txr
+txr\Mercedes_kabTOP3.txr
+txr\Mercedes_kapote3.txr
+txr\Mercedes_stupen3.txr
+txr\Mercedes_parts3.txr
+txr\Mercedes_butt3.txr
+txr\Mercedes_air3.txr
+END
+CLUSTER Mercedes4_car_cl
+txr\Mercedes_BackWing4.txr
+txr\Mercedes_kabBACK4.txr
+txr\Mercedes_kabFRONT4.txr
+txr\Mercedes_kabSIDE4.txr
+txr\Mercedes_kabTOP4.txr
+txr\Mercedes_kapote4.txr
+txr\Mercedes_stupen4.txr
+txr\Mercedes_parts4.txr
+txr\Mercedes_butt4.txr
+txr\Mercedes_air4.txr
+END
+
+CLUSTER Daf1_car_cl
+txr\Daf_bak1.txr
+txr\Daf_bakBUTT1.txr
+txr\Daf_bar1.txr
+txr\Daf_kabine1.txr
+txr\Daf_kapote1.txr
+txr\Daf_panel1.txr
+txr\Daf_parts1.txr
+txr\Daf_wing1.txr
+END
+CLUSTER Daf2_car_cl
+txr\Daf_bak2.txr
+txr\Daf_bakBUTT2.txr
+txr\Daf_bar2.txr
+txr\Daf_kabine2.txr
+txr\Daf_kapote2.txr
+txr\Daf_panel2.txr
+txr\Daf_parts2.txr
+txr\Daf_wing2.txr
+END
+CLUSTER Daf3_car_cl
+txr\Daf_bak3.txr
+txr\Daf_bakBUTT3.txr
+txr\Daf_bar3.txr
+txr\Daf_kabine3.txr
+txr\Daf_kapote3.txr
+txr\Daf_panel3.txr
+txr\Daf_parts3.txr
+txr\Daf_wing3.txr
+END
+CLUSTER Daf4_car_cl
+txr\Daf_bak4.txr
+txr\Daf_bakBUTT4.txr
+txr\Daf_bar4.txr
+txr\Daf_kabine4.txr
+txr\Daf_kapote4.txr
+txr\Daf_panel4.txr
+txr\Daf_parts4.txr
+txr\Daf_wing4.txr
+END
+
+CLUSTER Peterbilt1_car_cl
+txr\Peterbilt_air1.txr
+txr\Peterbilt_bakbump1.txr
+txr\Peterbilt_tubeOUT1.txr
+txr\Peterbilt_kabine1.txr
+txr\Peterbilt_kapote1.txr
+END
+CLUSTER Peterbilt2_car_cl
+txr\Peterbilt_air2.txr
+txr\Peterbilt_bakbump2.txr
+txr\Peterbilt_tubeOUT2.txr
+txr\Peterbilt_kabine2.txr
+txr\Peterbilt_kapote2.txr
+END
+CLUSTER Peterbilt3_car_cl
+txr\Peterbilt_air3.txr
+txr\Peterbilt_bakbump3.txr
+txr\Peterbilt_tubeOUT3.txr
+txr\Peterbilt_kabine3.txr
+txr\Peterbilt_kapote3.txr
+END
+CLUSTER Peterbilt4_car_cl
+txr\Peterbilt_air4.txr
+txr\Peterbilt_bakbump4.txr
+txr\Peterbilt_tubeOUT4.txr
+txr\Peterbilt_kabine4.txr
+txr\Peterbilt_kapote4.txr
+END
+
+CLUSTER Zil1_car_cl
+txr\Zil_kabine1.txr
+txr\Zil_kapot1.txr
+txr\Zil_parts1.txr
+END
+CLUSTER Zil2_car_cl
+txr\Zil_kabine2.txr
+txr\Zil_kapot2.txr
+txr\Zil_parts2.txr
+END
+CLUSTER Zil3_car_cl
+txr\Zil_kabine3.txr
+txr\Zil_kapot3.txr
+txr\Zil_parts3.txr
+END
+CLUSTER Zil4_car_cl
+txr\Zil_kabine4.txr
+txr\Zil_kapot4.txr
+txr\Zil_parts4.txr
+END
+
+CLUSTER ZilR1_car_cl
+txr\Zil_kabine1.txr
+txr\Zil_kapot1.txr
+txr\Zil_parts1.txr
+txr\zil_carriage.txr
+END
+CLUSTER ZilR2_car_cl
+txr\Zil_kabine2.txr
+txr\Zil_kapot2.txr
+txr\Zil_parts2.txr
+txr\zil_carriage.txr
+END
+CLUSTER ZilR3_car_cl
+txr\Zil_kabine3.txr
+txr\Zil_kapot3.txr
+txr\Zil_parts3.txr
+txr\zil_carriage.txr
+END
+CLUSTER ZilR4_car_cl
+txr\Zil_kabine4.txr
+txr\Zil_kapot4.txr
+txr\Zil_parts4.txr
+txr\zil_carriage.txr
+END
+
+CLUSTER Freightliner1_car_cl
+txr\Frei_parts1.txr
+txr\Frei_glass1.txr
+txr\Frei_kapTOP1.txr
+txr\Frei_head1.txr
+txr\Frei_kapFRONT1.txr
+txr\Frei_wing1.txr
+txr\Frei_kabBACK1.txr
+txr\Frei_roof1.txr
+txr\Frei_lights1.txr
+txr\Frei_door1.txr
+txr\Frei_body1.txr
+END
+CLUSTER Freightliner2_car_cl
+txr\Frei_parts2.txr
+txr\Frei_glass2.txr
+txr\Frei_kapTOP2.txr
+txr\Frei_head2.txr
+txr\Frei_kapFRONT2.txr
+txr\Frei_wing2.txr
+txr\Frei_kabBACK2.txr
+txr\Frei_roof2.txr
+txr\Frei_lights2.txr
+txr\Frei_door2.txr
+txr\Frei_body2.txr
+END
+CLUSTER Freightliner3_car_cl
+txr\Frei_parts3.txr
+txr\Frei_glass3.txr
+txr\Frei_kapTOP3.txr
+txr\Frei_head3.txr
+txr\Frei_kapFRONT3.txr
+txr\Frei_wing3.txr
+txr\Frei_kabBACK3.txr
+txr\Frei_roof3.txr
+txr\Frei_lights3.txr
+txr\Frei_door3.txr
+txr\Frei_body3.txr
+END
+CLUSTER Freightliner4_car_cl
+txr\Frei_parts4.txr
+txr\Frei_glass4.txr
+txr\Frei_kapTOP4.txr
+txr\Frei_head4.txr
+txr\Frei_kapFRONT4.txr
+txr\Frei_wing4.txr
+txr\Frei_kabBACK4.txr
+txr\Frei_roof4.txr
+txr\Frei_lights4.txr
+txr\Frei_door4.txr
+txr\Frei_body4.txr
+END
+
+CLUSTER Kamaz1_car_cl
+txr\kamaz_kabFRONT1.txr
+txr\kamaz_kabSIDE1.txr
+txr\kamaz_kabBACK1.txr
+txr\kamaz_kabTOP1.txr
+txr\kamaz_mudguard1.txr
+END
+CLUSTER Kamaz2_car_cl
+txr\kamaz_kabFRONT2.txr
+txr\kamaz_kabSIDE2.txr
+txr\kamaz_kabBACK2.txr
+txr\kamaz_kabTOP2.txr
+txr\kamaz_mudguard2.txr
+END
+CLUSTER Kamaz3_car_cl
+txr\kamaz_kabFRONT3.txr
+txr\kamaz_kabSIDE3.txr
+txr\kamaz_kabBACK3.txr
+txr\kamaz_kabTOP3.txr
+txr\kamaz_mudguard3.txr
+END
+CLUSTER Kamaz4_car_cl
+txr\kamaz_kabFRONT4.txr
+txr\kamaz_kabSIDE4.txr
+txr\kamaz_kabBACK4.txr
+txr\kamaz_kabTOP4.txr
+txr\kamaz_mudguard4.txr
+END
+
+CLUSTER Kenworth1_car_cl
+txr\T2000_kabFRONT1.txr
+txr\T2000_kabSIDE1.txr
+txr\T2000_kabTOP1.txr
+txr\T2000_kabBACK1.txr
+txr\T2000_parts1.txr
+txr\T2000_kapSIDE1.txr
+txr\T2000_kapFRONT1.txr
+txr\T2000_kapTOP1.txr
+END
+CLUSTER Kenworth2_car_cl
+txr\T2000_kabFRONT2.txr
+txr\T2000_kabSIDE2.txr
+txr\T2000_kabTOP2.txr
+txr\T2000_kabBACK2.txr
+txr\T2000_parts2.txr
+txr\T2000_kapSIDE2.txr
+txr\T2000_kapFRONT2.txr
+txr\T2000_kapTOP2.txr
+END
+CLUSTER Kenworth3_car_cl
+txr\T2000_kabFRONT3.txr
+txr\T2000_kabSIDE3.txr
+txr\T2000_kabTOP3.txr
+txr\T2000_kabBACK3.txr
+txr\T2000_parts3.txr
+txr\T2000_kapSIDE3.txr
+txr\T2000_kapFRONT3.txr
+txr\T2000_kapTOP3.txr
+END
+CLUSTER Kenworth4_car_cl
+txr\T2000_kabFRONT4.txr
+txr\T2000_kabSIDE4.txr
+txr\T2000_kabTOP4.txr
+txr\T2000_kabBACK4.txr
+txr\T2000_parts4.txr
+txr\T2000_kapSIDE4.txr
+txr\T2000_kapFRONT4.txr
+txr\T2000_kapTOP4.txr
+END
+
+CLUSTER Mack1_car_cl
+txr\Mack_kapTOP1.txr
+txr\Mack_kapFRONT1.txr
+txr\Mack_kapSIDE1.txr
+txr\Mack_kabTOP1.txr
+txr\Mack_kabFRONT1.txr
+txr\Mack_kabSIDE1.txr
+txr\Mack_kabBACK1.txr
+txr\Mack_parts1.txr
+END
+CLUSTER Mack2_car_cl
+txr\Mack_kapTOP2.txr
+txr\Mack_kapFRONT2.txr
+txr\Mack_kapSIDE2.txr
+txr\Mack_kabTOP2.txr
+txr\Mack_kabFRONT2.txr
+txr\Mack_kabSIDE2.txr
+txr\Mack_kabBACK2.txr
+txr\Mack_parts2.txr
+END
+CLUSTER Mack3_car_cl
+txr\Mack_kapTOP3.txr
+txr\Mack_kapFRONT3.txr
+txr\Mack_kapSIDE3.txr
+txr\Mack_kabTOP3.txr
+txr\Mack_kabFRONT3.txr
+txr\Mack_kabSIDE3.txr
+txr\Mack_kabBACK3.txr
+txr\Mack_parts3.txr
+END
+CLUSTER Mack4_car_cl
+txr\Mack_kapTOP4.txr
+txr\Mack_kapFRONT4.txr
+txr\Mack_kapSIDE4.txr
+txr\Mack_kabTOP4.txr
+txr\Mack_kabFRONT4.txr
+txr\Mack_kabSIDE4.txr
+txr\Mack_kabBACK4.txr
+txr\Mack_parts4.txr
+END
+
+CLUSTER Renault1_car_cl
+txr\renault_kabSIDE1.txr
+txr\renault_kabBACK1.txr
+txr\renault_kabTOP1.txr
+txr\renault_kabFRONT1.txr
+txr\renault_kabSF1.txr
+txr\renault_stupen1.txr
+txr\renault_butt1.txr
+txr\renault_parts1.txr
+END
+CLUSTER Renault2_car_cl
+txr\renault_kabSIDE2.txr
+txr\renault_kabBACK2.txr
+txr\renault_kabTOP2.txr
+txr\renault_kabFRONT2.txr
+txr\renault_kabSF2.txr
+txr\renault_stupen2.txr
+txr\renault_butt2.txr
+txr\renault_parts2.txr
+END
+CLUSTER Renault3_car_cl
+txr\renault_kabSIDE3.txr
+txr\renault_kabBACK3.txr
+txr\renault_kabTOP3.txr
+txr\renault_kabFRONT3.txr
+txr\renault_kabSF3.txr
+txr\renault_stupen3.txr
+txr\renault_butt3.txr
+txr\renault_parts3.txr
+END
+CLUSTER Renault4_car_cl
+txr\renault_kabSIDE4.txr
+txr\renault_kabBACK4.txr
+txr\renault_kabTOP4.txr
+txr\renault_kabFRONT4.txr
+txr\renault_kabSF4.txr
+txr\renault_stupen4.txr
+txr\renault_butt4.txr
+txr\renault_parts4.txr
+END
+
+CLUSTER Scania1_car_cl
+txr\scania_chassis1.txr
+txr\scania_kabBACK1.txr
+txr\scania_kabFRONT1.txr
+txr\scania_kabSIDE1.txr
+txr\scania_kabTOP1.txr
+END
+CLUSTER Scania2_car_cl
+txr\scania_chassis2.txr
+txr\scania_kabBACK2.txr
+txr\scania_kabFRONT2.txr
+txr\scania_kabSIDE2.txr
+txr\scania_kabTOP2.txr
+END
+CLUSTER Scania3_car_cl
+txr\scania_chassis3.txr
+txr\scania_kabBACK3.txr
+txr\scania_kabFRONT3.txr
+txr\scania_kabSIDE3.txr
+txr\scania_kabTOP3.txr
+END
+CLUSTER Scania4_car_cl
+txr\scania_chassis4.txr
+txr\scania_kabBACK4.txr
+txr\scania_kabFRONT4.txr
+txr\scania_kabSIDE4.txr
+txr\scania_kabTOP4.txr
+END
+
+CLUSTER ScaniaR1_car_cl
+txr\scania_carriage.txr
+txr\scania_kabFRONT1.txr
+txr\scania_kabBACK1.txr
+txr\scania_kabSIDE1.txr
+txr\scania_chassis1.txr
+txr\scania_kabTOP1.txr
+END
+CLUSTER ScaniaR2_car_cl
+txr\scania_carriage.txr
+txr\scania_kabFRONT2.txr
+txr\scania_kabBACK2.txr
+txr\scania_kabSIDE2.txr
+txr\scania_chassis2.txr
+txr\scania_kabTOP2.txr
+END
+CLUSTER ScaniaR3_car_cl
+txr\scania_carriage.txr
+txr\scania_kabFRONT3.txr
+txr\scania_kabBACK3.txr
+txr\scania_kabSIDE3.txr
+txr\scania_chassis3.txr
+txr\scania_kabTOP3.txr
+END
+CLUSTER ScaniaR4_car_cl
+txr\scania_carriage.txr
+txr\scania_kabFRONT4.txr
+txr\scania_kabBACK4.txr
+txr\scania_kabSIDE4.txr
+txr\scania_chassis4.txr
+txr\scania_kabTOP4.txr
+END
+
+CLUSTER KamazR1_car_cl
+txr\kamaz_carriage.txr
+txr\kamaz_kabFRONT1.txr
+txr\kamaz_kabSIDE1.txr
+txr\kamaz_kabBACK1.txr
+txr\kamaz_kabTOP1.txr
+txr\kamaz_mudguard1.txr
+END
+CLUSTER KamazR2_car_cl
+txr\kamaz_carriage.txr
+txr\kamaz_kabFRONT2.txr
+txr\kamaz_kabSIDE2.txr
+txr\kamaz_kabBACK2.txr
+txr\kamaz_kabTOP2.txr
+txr\kamaz_mudguard2.txr
+END
+CLUSTER KamazR3_car_cl
+txr\kamaz_carriage.txr
+txr\kamaz_kabFRONT3.txr
+txr\kamaz_kabSIDE3.txr
+txr\kamaz_kabBACK3.txr
+txr\kamaz_kabTOP3.txr
+txr\kamaz_mudguard3.txr
+END
+CLUSTER KamazR4_car_cl
+txr\kamaz_carriage.txr
+txr\kamaz_kabFRONT4.txr
+txr\kamaz_kabSIDE4.txr
+txr\kamaz_kabBACK4.txr
+txr\kamaz_kabTOP4.txr
+txr\kamaz_mudguard4.txr
+END
+
+CLUSTER RenaultR1_car_cl
+txr\renault_kabBACK1.txr
+txr\renault_kabFRONT1.txr
+txr\renault_kabSF1.txr
+txr\renault_kabSIDE1.txr
+txr\renault_kabTOP1.txr
+txr\renault_stupen1.txr
+txr\renault_parts1.txr
+txr\renault_butt1.txr
+txr\renault_carriage.txr
+END
+CLUSTER RenaultR2_car_cl
+txr\renault_kabBACK2.txr
+txr\renault_kabFRONT2.txr
+txr\renault_kabSF2.txr
+txr\renault_kabSIDE2.txr
+txr\renault_kabTOP2.txr
+txr\renault_stupen2.txr
+txr\renault_parts2.txr
+txr\renault_butt2.txr
+txr\renault_carriage.txr
+END
+CLUSTER RenaultR3_car_cl
+txr\renault_kabBACK3.txr
+txr\renault_kabFRONT3.txr
+txr\renault_kabSF3.txr
+txr\renault_kabSIDE3.txr
+txr\renault_kabTOP3.txr
+txr\renault_stupen3.txr
+txr\renault_parts3.txr
+txr\renault_butt3.txr
+txr\renault_carriage.txr
+END
+CLUSTER RenaultR4_car_cl
+txr\renault_kabBACK4.txr
+txr\renault_kabFRONT4.txr
+txr\renault_kabSF4.txr
+txr\renault_kabSIDE4.txr
+txr\renault_kabTOP4.txr
+txr\renault_stupen4.txr
+txr\renault_parts4.txr
+txr\renault_butt4.txr
+txr\renault_carriage.txr
+END
+
+CLUSTER MercedesR1_car_cl
+txr\Mercedes_carriage.txr
+txr\Mercedes_BackWing1.txr
+txr\Mercedes_kabBACK1.txr
+txr\Mercedes_kabFRONT1.txr
+txr\Mercedes_kabSIDE1.txr
+txr\Mercedes_kabTOP1.txr
+txr\Mercedes_kapote1.txr
+txr\Mercedes_stupen1.txr
+txr\Mercedes_parts1.txr
+txr\Mercedes_butt1.txr
+txr\Mercedes_air1.txr
+END
+CLUSTER MercedesR2_car_cl
+txr\Mercedes_carriage.txr
+txr\Mercedes_BackWing2.txr
+txr\Mercedes_kabBACK2.txr
+txr\Mercedes_kabFRONT2.txr
+txr\Mercedes_kabSIDE2.txr
+txr\Mercedes_kabTOP2.txr
+txr\Mercedes_kapote2.txr
+txr\Mercedes_stupen2.txr
+txr\Mercedes_parts2.txr
+txr\Mercedes_butt2.txr
+txr\Mercedes_air2.txr
+END
+CLUSTER MercedesR3_car_cl
+txr\Mercedes_carriage.txr
+txr\Mercedes_BackWing3.txr
+txr\Mercedes_kabBACK3.txr
+txr\Mercedes_kabFRONT3.txr
+txr\Mercedes_kabSIDE3.txr
+txr\Mercedes_kabTOP3.txr
+txr\Mercedes_kapote3.txr
+txr\Mercedes_stupen3.txr
+txr\Mercedes_parts3.txr
+txr\Mercedes_butt3.txr
+txr\Mercedes_air3.txr
+END
+CLUSTER MercedesR4_car_cl
+txr\Mercedes_carriage.txr
+txr\Mercedes_BackWing4.txr
+txr\Mercedes_kabBACK4.txr
+txr\Mercedes_kabFRONT4.txr
+txr\Mercedes_kabSIDE4.txr
+txr\Mercedes_kabTOP4.txr
+txr\Mercedes_kapote4.txr
+txr\Mercedes_stupen4.txr
+txr\Mercedes_parts4.txr
+txr\Mercedes_butt4.txr
+txr\Mercedes_air4.txr
+END
+
+CLUSTER VolvoR1_car_cl
+txr\Volvo_carriage.txr
+txr\Volvo_wing1.txr
+txr\Volvo_kabine1.txr
+txr\Volvo_kapot1.txr
+txr\Volvo_parts1.txr
+END
+CLUSTER VolvoR2_car_cl
+txr\Volvo_carriage.txr
+txr\Volvo_wing2.txr
+txr\Volvo_kabine2.txr
+txr\Volvo_kapot2.txr
+txr\Volvo_parts2.txr
+END
+CLUSTER VolvoR3_car_cl
+txr\Volvo_carriage.txr
+txr\Volvo_wing3.txr
+txr\Volvo_kabine3.txr
+txr\Volvo_kapot3.txr
+txr\Volvo_parts3.txr
+END
+CLUSTER VolvoR4_car_cl
+txr\Volvo_carriage.txr
+txr\Volvo_wing4.txr
+txr\Volvo_kabine4.txr
+txr\Volvo_kapot4.txr
+txr\Volvo_parts4.txr
+END
+
+CLUSTER DafR1_car_cl
+txr\Daf_carriage.txr
+txr\Daf_parts1.txr
+txr\Daf_wing1.txr
+txr\Daf_kabine1.txr
+txr\Daf_kapote1.txr
+txr\Daf_bak1.txr
+txr\Daf_bakBUTT1.txr
+txr\Daf_bar1.txr
+txr\Daf_panel1.txr
+END
+CLUSTER DafR2_car_cl
+txr\Daf_carriage.txr
+txr\Daf_parts2.txr
+txr\Daf_wing2.txr
+txr\Daf_kabine2.txr
+txr\Daf_kapote2.txr
+txr\Daf_bak2.txr
+txr\Daf_bakBUTT2.txr
+txr\Daf_bar2.txr
+txr\Daf_panel2.txr
+END
+CLUSTER DafR3_car_cl
+txr\Daf_carriage.txr
+txr\Daf_parts3.txr
+txr\Daf_wing3.txr
+txr\Daf_kabine3.txr
+txr\Daf_kapote3.txr
+txr\Daf_bak3.txr
+txr\Daf_bakBUTT3.txr
+txr\Daf_bar3.txr
+txr\Daf_panel3.txr
+END
+CLUSTER DafR4_car_cl
+txr\Daf_carriage.txr
+txr\Daf_parts4.txr
+txr\Daf_wing4.txr
+txr\Daf_kabine4.txr
+txr\Daf_kapote4.txr
+txr\Daf_bak4.txr
+txr\Daf_bakBUTT4.txr
+txr\Daf_bar4.txr
+txr\Daf_panel4.txr
+END
+
+CLUSTER STrailerM1_car_cl
+txr\STrailerModule_all1.txr
+END
+CLUSTER STrailerM2_car_cl
+txr\STrailerModule_all2.txr
+END
+CLUSTER STrailerM3_car_cl
+txr\STrailerModule_all3.txr
+END
+CLUSTER STrailerM4_car_cl
+txr\STrailerModule_all4.txr
+END
+CLUSTER STrailerM5_car_cl
+txr\STrailerModule_all5.txr
+END
+CLUSTER STrailerM6_car_cl
+txr\STrailerModule_all6.txr
+END
+
+CLUSTER Cayman1_car_cl
+txr\Cayman_body1.txr
+txr\Cayman_bodyd1.txr
+txr\Cayman_bottom1.txr
+txr\Cayman_poddon1.txr
+END
+
+CLUSTER Cayman2_car_cl
+txr\Cayman_body2.txr
+txr\Cayman_bodyd2.txr
+txr\Cayman_bottom2.txr
+txr\Cayman_poddon2.txr
+END
+
+CLUSTER Cayman3_car_cl
+txr\Cayman_body3.txr
+txr\Cayman_bodyd3.txr
+txr\Cayman_bottom3.txr
+txr\Cayman_poddon3.txr
+END
+
+CLUSTER Cayman4_car_cl
+txr\Cayman_body4.txr
+txr\Cayman_bodyd4.txr
+txr\Cayman_bottom4.txr
+txr\Cayman_poddon4.txr
+END
+
+CLUSTER Cayman5_car_cl
+txr\Cayman_body5.txr
+txr\Cayman_bodyd5.txr
+txr\Cayman_bottom5.txr
+txr\Cayman_poddon5.txr
+END

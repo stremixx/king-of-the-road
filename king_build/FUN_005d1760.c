@@ -1,0 +1,20 @@
+
+void __fastcall FUN_005d1760(undefined4 *param_1)
+
+{
+  if ((LPCVOID)param_1[3] != (LPCVOID)0x0) {
+    UnmapViewOfFile((LPCVOID)param_1[3]);
+  }
+  param_1[3] = 0;
+  if ((HANDLE)param_1[1] != (HANDLE)0xffffffff) {
+    CloseHandle((HANDLE)param_1[1]);
+  }
+  param_1[1] = 0xffffffff;
+  if ((HANDLE)*param_1 != (HANDLE)0xffffffff) {
+    CloseHandle((HANDLE)*param_1);
+  }
+  *param_1 = 0xffffffff;
+  *(undefined1 *)(param_1 + 5) = 0;
+  return;
+}
+

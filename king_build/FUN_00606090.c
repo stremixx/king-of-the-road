@@ -1,0 +1,33 @@
+
+void __fastcall FUN_00606090(int *param_1)
+
+{
+  int *piVar1;
+  int iVar2;
+  
+  piVar1 = (int *)param_1[2];
+  if (piVar1 != (int *)0x0) {
+    if ((int *)*piVar1 == param_1) {
+      *piVar1 = 0;
+    }
+    else if ((int *)piVar1[1] == param_1) {
+      piVar1[1] = 0;
+    }
+    else {
+      FUN_0060a190(0x88762712,s_File____s__Line_____ld__Date_____006714b0,
+                   s_C__Nek_VRAPPLVS_marine_bintree_h_00683978,0x23,s_Mar_19_2002_006714f8);
+    }
+  }
+  iVar2 = *param_1;
+  if (iVar2 != 0) {
+    FUN_00606090();
+    FUN_00631d5c(iVar2);
+  }
+  iVar2 = param_1[1];
+  if (iVar2 != 0) {
+    FUN_00606090();
+    FUN_00631d5c(iVar2);
+  }
+  return;
+}
+

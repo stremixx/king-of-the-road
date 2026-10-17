@@ -1,0 +1,10 @@
+
+void __thiscall FUN_004f7690(int param_1,undefined4 param_2,undefined4 param_3,undefined4 param_4)
+
+{
+  *(undefined4 *)(param_1 + 0x2334) = param_2;
+  *(undefined4 *)(param_1 + 0x2338) = param_3;
+  *(undefined4 *)(param_1 + 0x233c) = param_4;
+  return;
+}
+

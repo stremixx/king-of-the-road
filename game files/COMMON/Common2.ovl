@@ -1,0 +1,95 @@
+CLUSTER fon_main_cl
+txr\fon_0104.txr
+txr\fon_0506.txr
+txr\fon_1007.txr
+txr\fon_1116.txr
+END
+
+CLUSTER fon_mount_cl
+txr\fon_24.txr
+txr\fon_56.txr
+txr\fon_79.txr
+END
+
+OVERLAY
+fon_main_cl
+fon_mount_cl
+END
+
+CLUSTER sky_max_cl
+txr\sky1.txr
+txr\sky2.txr
+txr\sky3.txr
+txr\sky4.txr
+txr\sky5.txr
+END
+
+CLUSTER sky_min_cl
+txr\sky_3.txr
+txr\sky_4.txr
+txr\sky_5.txr
+txr\sky_6.txr
+END
+
+OVERLAY
+sky_max_cl
+sky_min_cl
+END
+
+CLUSTER AnmObj0201_car_cl
+txr\furgon01.txr
+txr\furgon02.txr
+txr\furgon00.txr
+END
+
+CLUSTER AnmObj0202_car_cl
+txr\furgon_s.txr
+txr\furgon_f.txr
+txr\furgon_w.txr
+END
+
+CLUSTER AnmObj0203_car_cl
+txr\tankRS.txr
+txr\tankRT.txr
+END
+
+CLUSTER AnmObj0204_car_cl
+txr\tankBS.txr
+txr\tankBT.txr
+END
+
+CLUSTER AnmObj0205_car_cl
+txr\tankRS.txr
+txr\tankRT.txr
+txr\tcanMS.txr
+END
+
+CLUSTER AnmObj0206_car_cl
+txr\tankBS.txr
+txr\tankBT.txr
+txr\tcanMS.txr
+END
+
+CLUSTER AnmObj0207_car_cl
+txr\tcanBS.txr
+txr\tcanBT.txr
+END
+
+CLUSTER AnmObj0208_car_cl
+txr\tcanRS.txr
+txr\tcanRT.txr
+END
+
+CLUSTER AnmObj0209_car_cl
+txr\tcanMS.txr
+txr\tcanMT.txr
+END
+
+CLUSTER AnmObj0231_car_cl
+txr\contain.txr
+END
+
+CLUSTER AnmObj0241_car_cl
+txr\cys_SIDE.txr
+txr\cys_BUTT.txr
+END
