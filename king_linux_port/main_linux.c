@@ -33,10 +33,11 @@ typedef struct {
 } ResPreset;
 
 static ResPreset g_presets[] = {
+    {1536, 864,  "1536x864 (16:9 Wayland Native 1.25x)"},
+    {1920, 1080, "1920x1080 (16:9 Full HD)"},
     {1280, 720,  "1280x720 (16:9 HD)"},
     {1366, 768,  "1366x768 (16:9 WXGA)"},
     {1600, 900,  "1600x900 (16:9 HD+)"},
-    {1920, 1080, "1920x1080 (16:9 Full HD)"},
     {2560, 1440, "2560x1440 (16:9 QHD 2K)"},
     {3840, 2160, "3840x2160 (16:9 4K UHD)"},
     {2560, 1080, "2560x1080 (21:9 Ultrawide)"},
@@ -292,15 +293,22 @@ static bool copy_file(const char *src, const char *dst) {
     return true;
 }
 
-static void ensure_d2gi_installed(const char *game_dir, const char *base_dir) {
+static void ensure_wrappers_installed(const char *game_dir, const char *base_dir) {
     char src_dll[PATH_MAX + 128], dst_dll[PATH_MAX + 128], bak_dll[PATH_MAX + 128];
     char src_ini[PATH_MAX + 128], dst_ini[PATH_MAX + 128];
+    char src_dxvk[PATH_MAX + 128], dst_dxvk[PATH_MAX + 128];
+    char src_dxvk_conf[PATH_MAX + 128], dst_dxvk_conf[PATH_MAX + 128];
 
     snprintf(src_dll, sizeof(src_dll), "%s/king_linux_port/d2gi/ddraw.dll", base_dir);
     snprintf(dst_dll, sizeof(dst_dll), "%s/ddraw.dll", game_dir);
     snprintf(bak_dll, sizeof(bak_dll), "%s/ddraw_gog.dll", game_dir);
     snprintf(src_ini, sizeof(src_ini), "%s/king_linux_port/d2gi/d2gi.ini", base_dir);
     snprintf(dst_ini, sizeof(dst_ini), "%s/d2gi.ini", game_dir);
+
+    snprintf(src_dxvk, sizeof(src_dxvk), "%s/king_linux_port/dxvk/d3d9.dll", base_dir);
+    snprintf(dst_dxvk, sizeof(dst_dxvk), "%s/d3d9.dll", game_dir);
+    snprintf(src_dxvk_conf, sizeof(src_dxvk_conf), "%s/king_linux_port/dxvk/dxvk.conf", base_dir);
+    snprintf(dst_dxvk_conf, sizeof(dst_dxvk_conf), "%s/dxvk.conf", game_dir);
 
     struct stat st;
     if (stat(dst_dll, &st) == 0) {
@@ -312,14 +320,14 @@ static void ensure_d2gi_installed(const char *game_dir, const char *base_dir) {
             }
             if (access(src_dll, F_OK) == 0) {
                 if (copy_file(src_dll, dst_dll)) {
-                    printf("[+] Replaced legacy GOG ddraw wrapper with high-performance D2GI D3D9 wrapper (60 FPS).\n");
+                    printf("[+] Replaced legacy GOG ddraw wrapper with high-performance D2GI D3D9 wrapper.\n");
                 }
             }
         }
     } else {
         if (access(src_dll, F_OK) == 0) {
             if (copy_file(src_dll, dst_dll)) {
-                printf("[+] Installed D2GI DirectDraw->Direct3D9 60 FPS hardware wrapper to game directory.\n");
+                printf("[+] Installed D2GI DirectDraw->Direct3D9 hardware wrapper to game directory.\n");
             }
         }
     }
@@ -328,17 +336,39 @@ static void ensure_d2gi_installed(const char *game_dir, const char *base_dir) {
         copy_file(src_ini, dst_ini);
         printf("[+] Initialized d2gi.ini configuration from template.\n");
     }
+
+    /* Deploy DXVK (Direct3D 9 -> Vulkan translation for Intel Mesa / AMD / NVIDIA) */
+    if (access(src_dxvk, F_OK) == 0) {
+        struct stat st_src, st_dst;
+        if (stat(src_dxvk, &st_src) == 0) {
+            if (stat(dst_dxvk, &st_dst) != 0 || st_src.st_size != st_dst.st_size) {
+                if (copy_file(src_dxvk, dst_dxvk)) {
+                    printf("[+] Installed DXVK Vulkan Direct3D 9 accelerator (Smooth 60+ FPS).\n");
+                }
+            }
+        }
+    }
+    if (access(src_dxvk_conf, F_OK) == 0) {
+        copy_file(src_dxvk_conf, dst_dxvk_conf);
+    }
+
+    /* Clean up outdated king_of_the_road inside game files if present */
+    char old_bin[PATH_MAX + 128];
+    snprintf(old_bin, sizeof(old_bin), "%s/king_of_the_road", game_dir);
+    if (access(old_bin, F_OK) == 0) {
+        unlink(old_bin);
+    }
 }
 
 static void load_config(const char *game_dir, GameConfig *cfg) {
-    /* Defaults: 1920x1080 16:9 Hor+, Fullscreen (borderless desktop), FOV 1.60, VSync Off (60+ FPS, zero stutter), MSAA Off, 16x AF */
+    /* Defaults: 1920x1080 (or 1536x864 native Wayland), Fullscreen borderless, FOV 1.60, VSync Off, MSAA Off, AF Off */
     cfg->width = 1920;
     cfg->height = 1080;
     cfg->fullscreen = true;
     cfg->fov = 1.60;
-    cfg->vsync = false; /* Disabled by default for maximum framerate and no vblank stutter */
-    cfg->msaa_idx = 0; /* Off (disabled) by default for smooth high FPS */
-    cfg->anisotropic = true;
+    cfg->vsync = false; /* Disabled by default for maximum framerate and zero vblank stutter */
+    cfg->msaa_idx = 0;  /* Off (disabled) by default for smooth 60 FPS */
+    cfg->anisotropic = false; /* Off by default to maximize Intel GPU texture fillrate */
     cfg->skip_intro = true;
     cfg->lock_res = true;
 
@@ -469,7 +499,7 @@ static bool save_config(const char *game_dir, const GameConfig *cfg) {
             "[HOOKS]\r\n"
             "EnableHooks = 1\r\n"
             "EnableUIFix = 1\r\n"
-            "EnableMirrorsFix = 1\r\n"
+            "EnableMirrorsFix = 0\r\n"
             "AllCoresAffinity = 1\r\n"
             "\r\n"
             "[SCREENSHOTS]\r\n"
@@ -482,7 +512,7 @@ static bool save_config(const char *game_dir, const GameConfig *cfg) {
             cfg->height,
             cfg->fullscreen ? "borderless" : "windowed",
             cfg->vsync ? 1 : 0,
-            cfg->anisotropic ? 16 : 0,
+            cfg->anisotropic ? 4 : 0,
             msaa_val
         );
         fclose(d2f);
@@ -541,8 +571,8 @@ static bool save_config(const char *game_dir, const GameConfig *cfg) {
         "[RENDER]\r\n"
         "\r\n"
         "detail=90\r\n"
-        "dcoeff=0.15\r\n"
-        "fog=on 10000 20000\r\n"
+        "dcoeff=0.25\r\n"
+        "fog=on 350 1500\r\n"
         "zbuf=on\r\n"
         "xpyramid=1.2\r\n"
         "ypyramid=0.9\r\n"
@@ -604,10 +634,10 @@ static bool save_config(const char *game_dir, const GameConfig *cfg) {
         "wtemp=0.13\r\n"
         "\r\n"
         "reduced=on\r\n"
-        "dtl=100\r\n"
-        "grf=100\r\n"
-        "trafs=100\r\n"
-        "trafm=100\r\n"
+        "dtl=85\r\n"
+        "grf=85\r\n"
+        "trafs=50\r\n"
+        "trafm=50\r\n"
         "video=%u\r\n"
         "lastp=DRIVER\r\n"
         "logo=5\r\n"
@@ -664,8 +694,9 @@ static void print_status(const char *game_dir, const GameConfig *cfg) {
     printf("================================================================\n");
     printf("  Game Directory     : %s\n", game_dir);
     printf("  Binary Patch (.qol): %s\n", verify_qol_patch(game_dir) ? "ACTIVE (VA 0x007bb000)" : "NOT APPLIED");
-    printf("  Graphics Wrapper   : D2GI Direct3D9 Hardware Accelerated (Smooth 60 FPS)\n");
+    printf("  Graphics Pipeline  : D2GI (Direct3D 9) -> DXVK (Native Vulkan Hardware Acceleration)\n");
     printf("  CPU Optimization   : All-Cores Affinity Active (Multi-Threaded)\n");
+    printf("  Vulkan WSI Latency : Immediate Unthrottled (Zero Input Lag & Stutter)\n");
     printf("  Resolution         : %dx%d (Aspect %.2f:1)\n", cfg->width, cfg->height, aspect);
     printf("  Display Mode       : %s\n", cfg->fullscreen ? "Fullscreen (Borderless Desktop)" : "Windowed");
     printf("  Widescreen Mode    : Hor+ (3D World, 3D Cabin, 3D Gauges, 2D HUD & Mirrors)\n");
@@ -673,7 +704,7 @@ static void print_status(const char *game_dir, const GameConfig *cfg) {
            cfg->fov, hfov_deg, vfov_deg);
     printf("  VSync              : %s\n", cfg->vsync ? "Enabled" : "Disabled (Maximum FPS)");
     printf("  Anti-Aliasing      : %s\n", g_msaa_labels[cfg->msaa_idx & 3]);
-    printf("  Anisotropic Filter : %s\n", cfg->anisotropic ? "16x Enabled" : "Disabled");
+    printf("  Anisotropic Filter : %s\n", cfg->anisotropic ? "4x Enabled" : "Disabled");
     printf("  Skip Intro Video   : %s\n", cfg->skip_intro ? "Enabled" : "Disabled");
     printf("================================================================\n");
 }
@@ -919,7 +950,7 @@ int main(int argc, char **argv) {
     get_base_dir(base_dir, sizeof(base_dir));
     snprintf(game_dir, sizeof(game_dir), "%s/game files", base_dir);
 
-    ensure_d2gi_installed(game_dir, base_dir);
+    ensure_wrappers_installed(game_dir, base_dir);
 
     GameConfig cfg;
     load_config(game_dir, &cfg);
@@ -1035,17 +1066,23 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    /* Set WINEDLLOVERRIDES so Wine loads GOG's DirectDraw->D3D9 widescreen/scaling wrapper (ddraw.dll) */
-    setenv("WINEDLLOVERRIDES", "ddraw=n,b", 1);
+    /* WINEDLLOVERRIDES: Load D2GI (ddraw) and DXVK (d3d9) as native libraries */
+    setenv("WINEDLLOVERRIDES", "ddraw=n,b;d3d9=n,b", 1);
 
-    /* Performance Optimizations:
-     * - vblank_mode=0 / __GL_SYNC_TO_VBLANK=0: Disable driver-enforced vblank throttling on Mesa / Intel UHD / AMD / NVIDIA
-     * - WINE_D3D_CONFIG=csmt=3: Enable Command Stream Multi-Threading in WineD3D for 2x-3x higher draw throughput
-     * - WINEDEBUG=-all: Suppress wine debug/trace logging overhead to maximize framerates
+    /* Extreme Vulkan & GPU Performance Optimizations:
+     * - vblank_mode=0 / __GL_SYNC_TO_VBLANK=0: Unthrottle Mesa driver vblank caps
+     * - MESA_VK_WSI_PRESENT_MODE=immediate: Zero-latency immediate Vulkan presentation
+     * - DXVK_ASYNC=1: Asynchronous shader compilation to eliminate stutter
+     * - DXVK_FRAME_RATE=0: Uncapped high-framerate rendering
+     * - WINE_D3D_CONFIG=csmt=0x1: Multi-threaded command stream fallback if WineD3D is queried
+     * - WINEDEBUG=-all: Zero debug trace logging overhead
      */
     setenv("vblank_mode", "0", 1);
     setenv("__GL_SYNC_TO_VBLANK", "0", 1);
-    setenv("WINE_D3D_CONFIG", "csmt=3", 1);
+    setenv("MESA_VK_WSI_PRESENT_MODE", "immediate", 1);
+    setenv("DXVK_ASYNC", "1", 1);
+    setenv("DXVK_FRAME_RATE", "0", 1);
+    setenv("WINE_D3D_CONFIG", "csmt=0x1", 1);
     setenv("WINEDEBUG", "-all", 1);
 
     printf("[*] Launching Hard Truck 2: King of the Road (%dx%d)...\n", cfg.width, cfg.height);

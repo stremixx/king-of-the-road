@@ -197,6 +197,21 @@ def patch_executable(game_dir: str, qol_bin_path: str) -> None:
         shutil.copy2(src_ini, dst_ini)
         print("[+] Initialized d2gi.ini from template")
 
+    # Ensure DXVK Direct3D 9 -> Vulkan wrapper is deployed
+    dxvk_dir = os.path.join(base_dir, "king_linux_port", "dxvk")
+    src_dxvk = os.path.join(dxvk_dir, "d3d9.dll")
+    dst_dxvk = os.path.join(game_dir, "d3d9.dll")
+    src_dxvk_conf = os.path.join(dxvk_dir, "dxvk.conf")
+    dst_dxvk_conf = os.path.join(game_dir, "dxvk.conf")
+
+    if os.path.exists(src_dxvk):
+        if not os.path.exists(dst_dxvk) or os.path.getsize(dst_dxvk) != os.path.getsize(src_dxvk):
+            shutil.copy2(src_dxvk, dst_dxvk)
+            print("[+] Deployed DXVK Direct3D 9 -> Vulkan hardware accelerator")
+
+    if os.path.exists(src_dxvk_conf):
+        shutil.copy2(src_dxvk_conf, dst_dxvk_conf)
+
 
 if __name__ == "__main__":
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

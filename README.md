@@ -39,11 +39,12 @@ This project resolves all of these issues through a combination of an interactiv
 ## Key Features
 
 - **Smooth 60 FPS Performance & Extreme Graphics Optimization**:
-  - **D2GI Direct3D 9 Hardware Acceleration**: Replaces the sluggish stock GOG wrapper with the specialized open-source **D2GI** DirectDraw7/Direct3D7 to Direct3D 9 wrapper, utilizing native hardware vertex buffers and completely eliminating CPU-to-GPU memory bus readback stalls.
+  - **D2GI + DXVK Dual-Layer Hardware Acceleration**: Combines **D2GI** (DirectDraw7/Direct3D7 to Direct3D 9) with **DXVK** (Direct3D 9 to native **Vulkan**), completely bypassing WineD3D's high-overhead OpenGL translation path and unlocking true multi-threaded GPU hardware rendering on Intel Mesa (`anv`), AMD (`radv`), and NVIDIA (`nvk`).
   - **All-Cores CPU Affinity**: Bypasses the infamous King of the Road patch 8.2 single-core affinity lock (`SetProcessAffinityMask`), distributing rendering, physics, audio, and Wine threads across all available CPU cores.
   - **4:3 Aspect Ratio Menu Fix (`EnableUIFix = 1`)**: Automatically pillarboxes 2D UI and menus to their original un-stretched 4:3 aspect ratio while rendering 3D gameplay in crisp widescreen.
   - **Backbuffer Stall Elimination**: Hooks disable full-frame `GetRenderTargetData` stalls during weather/raindrop refraction.
-  - **Wine Multi-Threading & Unthrottled Pipeline**: Automatically exports `WINE_D3D_CONFIG=csmt=3` (Wine Command Stream Multi-Threading), `vblank_mode=0`, and `__GL_SYNC_TO_VBLANK=0` to eliminate driver vblank frame drops and maximize GPU throughput.
+  - **Zero-Latency Vulkan WSI & Unthrottled Pipeline**: Automatically exports `MESA_VK_WSI_PRESENT_MODE=immediate`, `DXVK_ASYNC=1`, `vblank_mode=0`, and `__GL_SYNC_TO_VBLANK=0` for zero-stutter immediate frame presentation.
+  - **NULL Texture Safety Guard (Hook 7)**: Intercepts `FUN_005d6e00` to prevent unhandled page fault crashes (`0x005D6F45`) if texture surfaces are missing or unallocated during scene transitions.
 - **True Hor+ Widescreen & Ultrawide Rendering**:
   - Full support for 1080p, 1440p, 4K, 21:9 ultrawide, and custom resolutions.
   - Hor+ camera frustum scaling keeps vertical field-of-view constant while expanding peripheral vision naturally across the 1st-person world camera, 3rd-person chase camera, and 3D interior cabin camera.
@@ -104,7 +105,7 @@ This project resolves all of these issues through a combination of an interactiv
 ### 2. The `.qol` PE Binary Patch Module (`qol_patch.c`)
 - Written in freestanding x86 assembly and C, compiled with `-m32 -ffreestanding -fno-pic -fno-pie`.
 - Linked against `king_syms.ld` into a dedicated PE section named `.qol` located at Virtual Address `0x007bb000`.
-- Provides six targeted engine hooks:
+- Provides targeted engine hooks:
   1. **Hook 1 (`0x005127a7`)**: Overrides hard-coded resolution table indexes with arbitrary resolution values (`width` and `height`) supplied via `TRUCK.INI [QOL]`.
   2. **Hook 2 (`0x005107ba`)**: Computes horizontal shift offsets for all 2D HUD elements (dashboard, icons, gauges, and competition ledger).
   3. **Hook 3 (`0x005970ef`)**: Recalculates the top-right mirror X position dynamically: `screen_width - mirror_width`.
@@ -113,12 +114,14 @@ This project resolves all of these issues through a combination of an interactiv
      Applies to the first-person camera, external camera, and interior 3D cabin camera (`DAT_00695c0c`).
   5. **Hook 5 (`0x00594fb8`)**: Adjusts interior side-mirror 2D projection scaling to match the modified camera field of view.
   6. **Hook 6 (`0x0053615a`)**: Anchors external 3D tachometer and speedometer gauges (`panelspace`) to the bottom-left corner of the widescreen display.
+  7. **Hook 7 (`0x005D6E00`)**: Null-buffer safety check in `FUN_005d6e00` that prevents segmentation faults when Direct3D exclusive-mode textures are uninitialized during 2D menu bootstrap.
 
 ### 3. PE Section Injector (`patch_king_pe.py`)
 - Automatically backs up `game files/king.exe` to `king.exe.bak`.
 - Appends the compiled `.qol` payload into the executable as a 5th PE section header.
 - Installs the entry point jumps into `.text`.
-- Patches PE byte sequences to fix legacy engine bugs (>2 GB VRAM detection, >=4 GB RAM overflow, CRT popups, and Indeo 5 video player hangs).
+- Patches PE byte sequences to fix legacy engine bugs (>2 GB VRAM detection, >=4 GB RAM overflow, CRT popups, and backbuffer readback stalls).
+- Automatically deploys D2GI DirectDraw -> Direct3D 9 wrapper and DXVK Direct3D 9 -> Vulkan hardware accelerator with dynamic vertex buffer caching (`cachedDynamicBuffers = True`).
 
 ### 4. Reverse-Engineered Source (`king_build/`)
 - Contains decompiled source files (over 4,000 reverse-engineered functions) extracted from Ghidra for analysis, documentation, and reference.
